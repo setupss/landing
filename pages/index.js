@@ -6,7 +6,31 @@ import Link from "next/link"
 import Head from "next/head"
 import favicon from "../public/favicon.ico"
 import { Meta } from "../components/partials/Meta.jsx"
+import { useState } from "react"
+import axios from "axios"
 export default function Home() {
+
+  const [email, setEmail] = useState("");
+
+  const sub = async (e) => {
+    e.preventDefault();
+    try{
+      console.log("TRY")
+      const response = await axios.post("/api/waitlist", {
+        email
+      })
+      if(response.data.message === "User pre-registered"){
+        alert("Added you to the waitlist!")
+      }else{
+        alert("You are already in the waitlist/ You have entered an invalid email")
+      }
+      console.log(response)
+    } catch (error) {
+      console.log(error)
+    }
+
+  }
+
   return (
     <>
     <Meta
@@ -62,13 +86,13 @@ export default function Home() {
     <span className="flex justify-center">
 
           <div>
-            <input type="text" placeholder="bob@gmail.com" className="mt-[1.5rem] border-2 rounded-lg h-[50px] w-[279px] mr-[0.25rem] text-center "/>
+            <input type="email" name="email" placeholder="bob@gmail.com" className="mt-[1.5rem] border-2 rounded-lg h-[50px] w-[279px] mr-[0.25rem] text-center " value={email} onChange={(e) => setEmail(e.target.value)}/>
           </div>
-      <buton className="bg-black text-white h-[50px] w-[182px] mt-[1.5rem] rounded-lg transition duration-150 ease-out hover:ease-in">
+      <buton onClick={sub} className="bg-black text-white h-[50px] w-[182px] mt-[1.5rem] rounded-lg transition duration-150 ease-out hover:ease-in">
         
         <span className="flex justify-center mt-[0.70rem] font-semibold transition ease-in-out delay-150">
         
-          <Link href="/get-started">Get Started</Link>
+          Get Started
           <span>
         </span>
         <span className="ml-[0.40rem] mt-[0.30rem]">
