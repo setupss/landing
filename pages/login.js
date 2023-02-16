@@ -4,7 +4,7 @@ import pc from "../public/assets/pc-hero.png"
 export default function login(){
     return(
         <>
-        <div className="static">
+        <div className="absolute inset-y-0  ">
             <Image
             src={pc}
             height={800}
@@ -15,7 +15,7 @@ export default function login(){
 
 
 
-        <div className="main-login absolute inset-y-0 right-0 mr-[15.5rem] mt-[3rem] static ">
+        <div className="main-login absolute inset-y-0 right-0 mr-[5rem] ">
 
             <span className="flex justify-center mt-[2.5rem]">
                 <Image
@@ -46,6 +46,10 @@ export default function login(){
           <span className="flex justify-center ml-[7.5rem]">
                 <input type="password" placeholder="password"  className="border-2 rounded-lg w-[360px] h-[48px] bg-slate-200"/>
 
+            </span>
+
+            <span className="flex justify-center">
+                <button className=" absolute bg-[#007AFF] text-white font-inter font-semibold text-[15px] ml-[100px] mt-[2.5rem] w-[360px] h-[48px] rounded-lg">Sign In</button>
             </span>
          
             </div>
