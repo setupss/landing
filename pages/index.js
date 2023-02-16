@@ -97,7 +97,7 @@ export default function Home() {
     </span>
 
     <div>
-      <span className="flex justify-center mt-[0.5rem] font-satoshi text-sm text-slate-500 font-semibold">❤️ Made by productive poeple, for productive people</span>
+      <span className="flex justify-center mt-[0.5rem] font-satoshi text-sm text-slate-500 font-semibold">❤️ Made by productive poeple, for productive people </span>
     </div>
 
 
