@@ -4,7 +4,7 @@ import pc from "../public/assets/pc-hero.png"
 export default function login(){
     return(
         <>
-        <div>
+        <div className="static">
             <Image
             src={pc}
             height={800}
@@ -15,7 +15,7 @@ export default function login(){
 
 
 
-        <div className="main-login absolute inset-y-0 right-0 mr-[15.5rem] mt-[3rem]">
+        <div className="main-login absolute inset-y-0 right-0 mr-[15.5rem] mt-[3rem] static ">
 
             <span className="flex justify-center mt-[2.5rem]">
                 <Image
