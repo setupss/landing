@@ -49,17 +49,7 @@ export default function Home() {
 
       {/* nav bar */}
 
-      <nav className="flex justify-between mt-[1.5rem]">
-        <span className="flex justify-center">
-          {/* display the logo */}
-          <Image
-          className="ml-[2rem]"
-          src={logo}
-          height={96}
-          width={96}
-          />
-        </span>
-        </nav>
+      
     <span className="flex justify-center mt-[10rem]">
     <Image
       src={hero}

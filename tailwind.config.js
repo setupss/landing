@@ -19,6 +19,7 @@ module.exports = {
     },
     fontFamily: {
       satoshi: ["Satoshi", "sans-serif"],
+      poppins: ["Poppins", "sans-serif"]
     },
   },
   plugins: [],
