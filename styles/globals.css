@@ -3,3 +3,10 @@
 @tailwind utilities;
 
 @import url('https://api.fontshare.com/v2/css?f[]=satoshi@400&display=swap');
+
+@layer base{
+    .text-top{
+        verctical-align: top;
+
+    }
+}
