@@ -25,29 +25,31 @@ export default function login(){
 
           {/* Form area. */}
 
-          <span className="flex justify-center mr-[20rem] mt-[5rem] font-satoshi">
+          <span className="flex justify-center mr-[20rem] mt-[5rem] font-satoshi text-[#333333]">
             <h2>Email</h2>
           </span>
           <span className="flex justify-center mt-[rem] rounded-lg">
             
-            <input type="email" required placeholder="bob@gmail.com" className="border-2 rounded-md border-slate-500 w-[360px] h-[48px] bg-grey-500" />
+            <input type="email" required placeholder="bob@gmail.com" className="border-1 rounded-md border-slate-500 w-[360px] h-[48px] bg-grey-500" />
           </span>
 
-          <span className="flex justify-center mr-[18rem] mt-[1.25rem] font-satoshi">
+          <span className="flex justify-center mr-[18rem] mt-[1.25rem] font-satoshi text-[#333333]">
             <h2>Password</h2>
           </span>
           <span className="flex justify-center mt-[] rounded-lg">
 
-            <input type="password" required placeholder="Password" className="border-2 rounded-md border-slate-500 w-[360px] h-[48px] bg-grey-500 " />
+            <input type="password" required placeholder="Enter Password" className=" border12 rounded-md border-slate-500 w-[360px] h-[48px] bg-grey-500 " />
           </span>
 
+          <span className="flex justify-center">
+          <button className="mt-[1.25rem] bg-[#007AFF] text-white font-poppins font-semibold w-[360px] h-[40px] rounded-lg">Sign in</button>
 
           </span>
 
-          
-
-
+          </span>
+        
           </div>
+
 
           <div className="w-1/2">
             <Image
@@ -57,6 +59,7 @@ export default function login(){
             className="lg:w-full lg:h-screen md:w-1/2 md:h=screen sm:h-full sm:w-1/2 xs:h-full xs:w-1/2"
             />
           </div>
+         
 
          
           

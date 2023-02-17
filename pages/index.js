@@ -97,7 +97,7 @@ export default function Home() {
     </span>
 
     <div>
-      <span className="flex justify-center mt-[0.5rem] font-satoshi text-sm text-slate-500 font-semibold">❤️ Made by productive poeple, for productive people </span>
+      <span className="flex justify-center mt-[0.5rem] font-satoshi text-sm text-slate-500 font-semibold">❤️ Made by productive people, for productive people </span>
     </div>
 
 
@@ -110,11 +110,11 @@ export default function Home() {
       </span>
 
       <span>
-        <h2 className="text-black font-semibold font-satoshi text-[16px] m-[5.5rem] ">work.space (2023)</h2>
+        <h2 className="text-black font-semibold font-satoshi text-[16px] flex justify-center mt-[2.5rem] ">work.space (2023)</h2>
         {/* copyright stoof */}
 
         <span>
-        <h3 className="text-slate-500 font-satoshi mt-[-4rem] ml-[4.9rem]">Copyright © 2022 work.space. All rights reserved.</h3>
+        <h3 className="text-slate-500 font-satoshi flex justify-center mt-[0.25rem]">Copyright © 2023 work.space. All rights reserved.</h3>
       </span>
 
       </span>
