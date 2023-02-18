@@ -14,6 +14,7 @@ export default function Home() {
 
   const sub = async (e) => {
     e.preventDefault();
+    
     try{
       const response = await axios.post("/api/waitlist", {
         email

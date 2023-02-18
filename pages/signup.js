@@ -1,7 +1,8 @@
 import Image from "next/image"
-import pc from "../public/assets/pc-hero.png"
+import pc from "../public/assets/pc-2.png"
 import logo from "../public/assets/logo.png"
-export default function login(){
+export default function signup(){ 
+    
     return(
         <>
         <div className="container">
@@ -21,7 +22,7 @@ export default function login(){
             />
           </span>
 
-          <h1 className="flex justify-center mt-[3.5rem] font-poppins font-semibold text-[28px]">Nice to see you again</h1>
+          <h1 className="flex justify-center mt-[3.5rem] font-poppins font-semibold text-[28px]">Create Your Account</h1>
 
           {/* Form area. */}
 
@@ -42,18 +43,17 @@ export default function login(){
           </span>
 
           <span className="flex justify-center">
-          <button className="mt-[1.25rem] bg-[#007AFF] text-white font-poppins font-semibold w-[360px] h-[40px] rounded-lg">Sign in</button>
+          <button className="mt-[1.25rem] bg-[#007AFF] text-white font-poppins font-semibold w-[360px] h-[40px] rounded-lg">Create my account</button>
 
           </span>
 
           <span className="flex justify-center">
-            <hr  className="mt-[2.5rem] w-[360px] "/>
+          <hr  className="mt-[2.5rem] w-[360px] "/>
             <br />
-
-            
           </span>
+
           <span className="mt-[0.25rem] flex justify-center">
-              Already Have an  <span className="text-[#007AFF] ml-[0.25rem]"><p>Account</p></span>
+              Don't Have an<span className="text-[#007AFF] ml-[0.25rem]"><p>Account?</p></span>
             </span>
 
           </span>
@@ -75,5 +75,7 @@ export default function login(){
           
         </div>
         </>
+
     )
+
 }
