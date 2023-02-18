@@ -31,7 +31,7 @@ export default function signup(){
           </span>
           <span className="flex justify-center mt-[rem] rounded-lg">
             
-            <input type="email" required placeholder="bob@gmail.com" className="border-1 rounded-md border-slate-500 w-[360px] h-[48px] bg-grey-500" />
+            <input type="email" required placeholder="bob@gmail.com" className="border-2 rounded-md border-black w-[360px] h-[48px] bg-grey-500" />
           </span>
 
           <span className="flex justify-center mr-[18rem] mt-[1.25rem] font-satoshi text-[#333333]">
@@ -39,7 +39,7 @@ export default function signup(){
           </span>
           <span className="flex justify-center mt-[] rounded-lg">
 
-            <input type="password" required placeholder="Enter Password" className=" border12 rounded-md border-slate-500 w-[360px] h-[48px] bg-grey-500 " />
+            <input type="password" required placeholder="Enter Password" className="border-2 border-black rounded-md  w-[360px] h-[48px] bg-grey-500 " />
           </span>
 
           <span className="flex justify-center">

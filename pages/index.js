@@ -21,7 +21,7 @@ export default function Home() {
       })
       if(response.data.message === "User pre-registered"){
         alert("Added you to the waitlist!")
-      }else{
+      }else{f
         alert("You are already in the waitlist/ You have entered an invalid email")
       }
       console.log(response)
@@ -78,9 +78,9 @@ export default function Home() {
           <div>
             <input type="email" name="email" placeholder="bob@gmail.com" className="mt-[1.5rem] border-2 rounded-lg h-[50px] w-[279px] mr-[0.25rem] text-center " value={email} onChange={(e) => setEmail(e.target.value)}/>
           </div>
-      <buton onClick={sub} className="bg-black text-white h-[50px] w-[182px] mt-[1.5rem] rounded-lg transition duration-150 ease-out hover:ease-in">
+      <button onClick={sub} className="bg-black text-white h-[50px] w-[182px] mt-[1.5rem] rounded-lg transition duration-150 ease-out hover:ease-in">
         
-        <span className="flex justify-center mt-[0.70rem] font-semibold transition ease-in-out delay-150">
+        <span className="flex justify-center  font-semibold transition ease-in-out delay-150">
         
           Get Started
           <span>
@@ -94,7 +94,7 @@ export default function Home() {
 
         </span>
         </span>
-        </buton>
+        </button>
     </span>
 
     <div>
