@@ -1,8 +1,50 @@
 import Image from "next/image"
 import pc from "../public/assets/pc-2.png"
 import logo from "../public/assets/logo.png"
+import { useCookies } from 'react-cookie';
+import { useRouter } from "next/router";
+import { useState } from "react";
+import axios from "axios"
 export default function signup(){ 
-    
+
+  const router = useRouter();
+
+  const [cookie , SetCookie] = useCookies(['user']);
+  const [state, setState] = useState("IDLE");
+  const [errorMessage, setErrorMessage] = useState(null);
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
+  const [name, setName] = useState("");
+
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    setState("LOADING");
+    setErrorMessage(null);
+    try {
+      const response = await axios.post("/api/signup", {
+        email,
+        password,
+        name,
+      });
+      const data = response.data;
+      SetCookie("user", JSON.stringify(data), {
+        path: "/",
+        maxAge: 60 * 60 * 24 * 7,
+        sameSite: true,
+      });
+      if(response.data.message === "User Created"){
+        router.push("/user/dashboard")
+      }else{
+        router.push("/login")
+      }
+      setState("SUCCESS");
+    } catch (error) {
+      console.log(error);
+      setState("ERROR");
+      setErrorMessage(error.response.data.message);
+    }
+  };
+
     return(
         <>
         <div className="container">
@@ -31,7 +73,7 @@ export default function signup(){
           </span>
           <span className="flex justify-center mt-[rem] rounded-lg">
             
-            <input type="email" required placeholder="bob@gmail.com" className="border-2 rounded-md border-black w-[360px] h-[48px] bg-grey-500" />
+            <input value={email} onChange={(e) => setEmail(e.target.value)}type="email" required placeholder="bob@gmail.com" className="border-2 rounded-md border-black w-[360px] h-[48px] bg-grey-500" />
           </span>
 
           <span className="flex justify-center mr-[18rem] mt-[1.25rem] font-satoshi text-[#333333]">
@@ -39,11 +81,11 @@ export default function signup(){
           </span>
           <span className="flex justify-center mt-[] rounded-lg">
 
-            <input type="password" required placeholder="Enter Password" className="border-2 border-black rounded-md  w-[360px] h-[48px] bg-grey-500 " />
+            <input value={password} onChange={(e) => setPassword(e.target.value)} type="password" required placeholder="Enter Password" className="border-2 border-black rounded-md  w-[360px] h-[48px] bg-grey-500 " />
           </span>
 
           <span className="flex justify-center">
-          <button className="mt-[1.25rem] bg-[#007AFF] text-white font-poppins font-semibold w-[360px] h-[40px] rounded-lg">Create my account</button>
+          <button onClick={handleSubmit} className="mt-[1.25rem] bg-[#007AFF] text-white font-poppins font-semibold w-[360px] h-[40px] rounded-lg">Create my account</button>
 
           </span>
 
@@ -66,7 +108,7 @@ export default function signup(){
             src={pc}
             width="100%"
             height="100%"
-            className="lg:w-full lg:h-screen md:w-1/2 md:h=screen sm:h-full sm:w-1/2 xs:h-full xs:w-1/2"
+            className="lg:w-full lg:h-screen md:w-auto md:h-screen sm:h-screen sm:w-auto "
             />
           </div>
          

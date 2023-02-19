@@ -66,7 +66,7 @@ export default function login(){
             src={pc}
             width="100%"
             height="100%"
-            className="lg:w-full lg:h-screen md:w-1/2 md:h=screen sm:h-full sm:w-1/2 xs:h-full xs:w-1/2"
+            className="lg:w-full lg:h-screen md:w-auto md:h-screen sm:h-screen sm:w-auto "
             />
           </div>
          

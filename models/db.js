@@ -6,7 +6,8 @@ export async function connectToDatabase(){
     const db = client.db("landing")
 
     const users = db.collection("landing-users")
+    const betaUsers = db.collection("users")
 
-    return {db, users}
+    return {db, users, betaUsers}
     
 }
