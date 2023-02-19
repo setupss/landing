@@ -27,15 +27,21 @@ export default function signup(){
         name,
       });
       const data = response.data;
+      console.log( "from the signup page:____" + data)
+      console.log(data)
       SetCookie("user", JSON.stringify(data), {
         path: "/",
         maxAge: 60 * 60 * 24 * 7,
         sameSite: true,
       });
-      if(response.data.message === "User Created"){
+      if(response.data.message === "Data inserted!"){
         router.push("/user/dashboard")
+        alert(
+        "New user created"
+        )
       }else{
         router.push("/login")
+        // alert("Something went wrong!")
       }
       setState("SUCCESS");
     } catch (error) {
@@ -68,7 +74,16 @@ export default function signup(){
 
           {/* Form area. */}
 
-          <span className="flex justify-center mr-[20rem] mt-[5rem] font-satoshi text-[#333333]">
+          <span className="flex justify-center mt-[5rem] mr-[20rem] font-satoshi text-[#333333]">
+            <h2>Name</h2>
+          </span>
+          <span className="flex justify-center  rounded-lg">
+          <input type="name" required placeholder="bob" className="border-2 rounded-md border-black w-[360px] h-[48px] bg-grey-500"  value={name} onChange={(e) =>setName(e.target.value) }/>
+          </span>
+
+
+
+          <span className="flex justify-center mr-[20rem] mt-[0.25rem] font-satoshi text-[#333333]">
             <h2>Email</h2>
           </span>
           <span className="flex justify-center mt-[rem] rounded-lg">

@@ -24,6 +24,7 @@ export default function login(){
           <h1 className="flex justify-center mt-[3.5rem] font-poppins font-semibold text-[28px]">Nice to see you again</h1>
 
           {/* Form area. */}
+          
 
           <span className="flex justify-center mr-[20rem] mt-[5rem] font-satoshi text-[#333333]">
             <h2>Email</h2>
