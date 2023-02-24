@@ -33,11 +33,10 @@ export default async function handler(req , res){
         const {db , betaUsers} = await connectToDatabase();
         const exists = await betaUsers.findOne({email: email});
         if(exists){
-            res.status(201).json({ message: "Email already registered" });
+            res.status(201).json({ message: "Email already registered" });  
         }else{
             const result = await betaUsers.insertOne(data);
-            res.status(201).json({ message: "Data inserted!", token: data.token });
-
+            res.status(201).json({ message:  "Data inserted!", token: data.token});
 
         }
     }

@@ -8,7 +8,7 @@ export default async function handler(req, res){
         }
         // if no email is entertend then send message in json saying no email is enteted
         if(!email){
-            res.status(400).json({ message: "Please enter an email id" })
+            res.status(201).json({ message: "Please enter an email id" })
         }
 
     

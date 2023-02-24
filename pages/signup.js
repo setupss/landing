@@ -29,12 +29,14 @@ export default function signup(){
       const data = response.data;
       console.log( "from the signup page:____" + data)
       console.log(data)
-      SetCookie("user", JSON.stringify(data), {
-        path: "/",
-        maxAge: 60 * 60 * 24 * 7,
-        sameSite: true,
-      });
+     
       if(response.data.message === "Data inserted!"){
+        SetCookie("user", JSON.stringify(response.data.token), {
+          path: "/",
+          maxAge: 60 * 60 * 24 * 7,
+          sameSite: true,
+        });
+
         router.push("/user/dashboard")
         alert(
         "New user created"
